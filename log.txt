@@ -54,3 +54,12 @@ $ Probelm solved with help from Nick. You can edit the migrate files
 
 ! Content cannot be blank
 ? Validation
+$ ALL GREEN For now
+
+!  RestaurantsController GET index assigns all restaurants as @restaurants
+? Check the rails routes and see what's wrong
+X Not from there
+$ Needed a gem to install. The rake file was mentionning it
+!  RestaurantsController POST create with valid params creates a new Restaurant Failure/Error: expected #count to have changed by 1, but was changed by 0
+
+

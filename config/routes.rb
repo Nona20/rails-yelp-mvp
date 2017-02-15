@@ -7,10 +7,8 @@ Rails.application.routes.draw do
       get 'chef', to: "restaurants#chef"  # RestaurantsController#chef
     end
 
-    resources :restaurants do
-      resources :reviews, only: [ :new, :create ]
-    end
-    get "restaurants/:id",                    to: "restaurants#show"
+    resources :reviews, only: [ :new, :create ]
+   # get "restaurants/:id",                    to: "restaurants#show"
   end
 
   namespace :admin do
