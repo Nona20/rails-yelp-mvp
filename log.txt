@@ -1,0 +1,56 @@
+! Create a PhoneNumber for the restaurants.
+  ? Copy the features of Reviews
+    ? Let's draw a route
+    $ Route created
+  (restaurant has_many :reviews ok)
+    ? In the Model
+      - Yes, copying previous model
+    ? Create a view
+      - Ok, copied from Chef, added in Show
+    ? Create a controller
+      ? do I need a controller?
+      - Not really, but maybe an action
+  - Looks like things are connected, time to test
+  - Displays "phone number" in restaurants
+  ! When I click on 'Show' I get an undefined method for phone number
+    ? show does not support phone number
+    - I think it's ok
+    ? phone number shouldn't be there
+    - It makes sense to display it here
+    ? There's actually no method for phone_number
+      ? maybe that means that there's no action in the controller for this.
+      - There's an action
+      ? We need to check the model
+      $ Got help from Nick and I should have created a migration
+    $ Error Solved
+  $ Shouldn't have copied the features of Reviews
+- Raking and moving on...
+- Keep working on adding the attributes for restaurant
+! Restaurant has a category
+  ? use a migration
+  $ Worked
+! chinese, italian, french, japanese are valid categories
+  ? check in the slides 'validation'
+    ? Check deeper activeRecord validation
+    - test with 'validates :category, inclusion: { in: %w(belgian french chinese japanese italian)}'
+  ! Doesn't work.
+  ? The syntax is wrong
+    ? Check the syntax again
+      ? Trying with more simple syntax
+      X Still not working
+      ? Cairan helped
+      X Still not
+    - Maybe not a syntax problem
+    ? Ticket|Joao. I should have db:migrate & db:seed
+    X Still the same problem, still the same error message
+    ...
+$ Problem solved
+! Main problem with ratings
+  ! the database keeps giving 'stars' as an attribute
+$ Problem solved with ratings
+! Review has a rating (stored as integer)
+  ? do a migrate remove, migrate add
+$ Probelm solved with help from Nick. You can edit the migrate files
+
+! Content cannot be blank
+? Validation
