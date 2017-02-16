@@ -7,3 +7,5 @@ class Restaurant < ApplicationRecord
   validates :phone_number, uniqueness: true # later: add inclusion is_a_phone_number
 end
 
+
+
